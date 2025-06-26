@@ -6,11 +6,14 @@ Rama currently only works on macOS or Linux and doesn't work on Windows.
 
 As explained in the docs, you can start a Groovy REPL with:
 
-```
+```bash
 mvn compile
+
+# Before launching the Groovy shell, make sure your JAVA_HOME points to Java 17 or lower
+# (Groovy 3.x and GMavenPlus do not support Java 18+; class file version 65 will fail).
 mvn gplus:shell
 ```
 
 This is a great way to run the examples or experiment.
 
-Please note: you should use Java 17 or below in order to avoid problems running the Groovy REPL.
+> **Note:** Groovy REPL via GMavenPlus currently requires Java 17 or below (set JAVA_HOME accordingly).
